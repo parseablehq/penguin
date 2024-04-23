@@ -42,4 +42,4 @@ jobs:
           file: ./Dockerfile
           push: true
           tags: ${{ secrets.DOCKERHUB_USERNAME }}/penguin:edge
-          platforms: linux/amd64,linux/arm64
+          platforms: linux/amd64
