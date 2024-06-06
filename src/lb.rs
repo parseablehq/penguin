@@ -20,7 +20,6 @@ impl ProxyHttp for LB {
             .unwrap();
 
         let peer = Box::new(HttpPeer::new(upstream, false, "".to_string()));
-        println!("Peer: {:?}", &peer);
         Ok(peer)
     }
 
