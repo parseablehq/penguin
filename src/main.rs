@@ -70,7 +70,7 @@ fn main() -> Result<(), Box<dyn std::error::Error>> {
 
     let hc = health_check::TcpHealthCheck::new();
     upstreams.set_health_check(hc);
-    upstreams.health_check_frequency = Some(Duration::from_secs(1));
+    upstreams.health_check_frequency = Some(Duration::from_secs(3600));
 
     let background = background_service("health check", upstreams);
 
